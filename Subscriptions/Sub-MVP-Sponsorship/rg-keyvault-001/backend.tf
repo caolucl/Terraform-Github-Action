@@ -6,10 +6,11 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name     = "rg-terraform-state-001"
-    storage_account_name    = "cloudninjaterraformstate"
-    container_name          = "tfstate"
-    key                     = "GitHub-Terraform-rg-keyvault-001"
+        resource_group_name  = "terraformlcaodev1-rg"
+        storage_account_name = "terraformlcaodev1stg"
+        container_name       = "terraform"
+        key                  = "Github-action-key-vault.tfstate"
+        access_key           = "replace-access-key"
   }
 }
 provider "azurerm" {
